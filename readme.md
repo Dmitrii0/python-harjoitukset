@@ -4,22 +4,21 @@
 
 ## Moduuli 1
 
-Olen tein tehtävät 1 ja 2
+Tein tehtävät 1 ja 2.
+
 ## Moduuli 2
 
 Tein tehtävät 1, 2 ja 3.
 
 
-## Moduuli 3 ja niin edelleen...
+## Moduuli 3
 
-<<<<<<< HEAD
 Tein tehtävät 1, 2, 3, 4, 5 ja 6.
 
 ## Moduuli 4
 
-Tein tehtävät 1, 2, 3, 4,
+Tein tehtävät 1, 2, 3 ja 4.
 
 ## Moduuli 5
-=======
-Tein tehtävät 1, 2, 3, 4, 5 ja 6.
->>>>>>> afdd0f3 (Update exercises)
+
+Tein tehtävän 1.
