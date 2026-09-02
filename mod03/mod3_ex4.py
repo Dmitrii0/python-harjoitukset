@@ -7,6 +7,6 @@ summa = eka_numero + toka_numero + kolmas_numero
 tulon = eka_numero * toka_numero * kolmas_numero
 keskiarvo = summa / 3
 
-print("Lukujen summa on: " + str(summa))
-print("Lukujen tulo on: " + str(tulon))
-print("Lukujen keskiarvo on: " + str(keskiarvo))
+print(f"Lukujen summa on: {summa}")
+print(f"Lukujen tulo on: {tulon}")
+print(f"Lukujen keskiarvo on: {keskiarvo}")

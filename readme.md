@@ -21,4 +21,12 @@ Tein tehtävät 1, 2, 3 ja 4.
 
 ## Moduuli 5
 
-Tein tehtävän 1.
+Tein tehtävän 1, 2, 3, 4, 5, ja 6.
+
+## Moduuli 6
+
+Tein tehtävän 1, 2, 3 ja 4
+
+## Moduuli 6
+
+
