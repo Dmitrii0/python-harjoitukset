@@ -4,7 +4,7 @@ def nopanheitto():
     heitto = random.randint(1, 6)
     return heitto
 
-tulos = nopanheitto()
+tulos = nopanheitto(maksimi)
 print(tulos)
 
 maksimi = int(input("Anna maksimuluku: "))

@@ -1,14 +1,13 @@
 import random
 
-def nopanheitto():
-    heitto = random.randint(1, 6)
-    return heitto
 
-tulos = nopanheitto()
-print(tulos)
+def nopanheitto(maksimi):
+    heitto = random.randint(1, maksimi)
+    return heitto
+maksimi = int(input("Anna maksimuluku: "))
 
 while True:
-    tulos = nopanheitto()
+    tulos = nopanheitto(maksimi)
     print(tulos)
-    if tulos == 6:
+    if tulos == maksimi:
         break
