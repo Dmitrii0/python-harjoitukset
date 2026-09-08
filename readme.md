@@ -29,4 +29,11 @@ Tein tehtävän 1, 2, 3 ja 4
 
 ## Moduuli 7
 
+Tein tehtävän 1, 2, 3, 4, 5, ja 6.
+
+## Moduuli 8
+
+Tein tehtävän 1, 2, ja 3.
+
+
 
