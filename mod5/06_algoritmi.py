@@ -1,4 +1,4 @@
-import random
+import random, math
 
 piste = int(input("Kuinka monta pistettä haluat arpoa: "))
 pisteet = 0
