@@ -1,9 +1,9 @@
-def laske_summa(luvut):
-    summa = 0
-    for luku in luvut:
-        summa += luku
-    return summa
-luvut = [1, 2, 3, 4, 5]
-print(laske_summa(luvut))
 
-##этот код складывает все числа в списке luvut и возвращает их сумму
+autot = [
+    {"merkki": "Toyota", "vuosi": 2018},
+    {"merkki": "Ford", "vuosi": 2020},
+    {"merkki": "VW", "vuosi": 2023}
+]
+for auto in autot:
+    if auto["vuosi"] > 2019:
+        print(auto["merkki"])
