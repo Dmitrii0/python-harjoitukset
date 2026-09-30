@@ -1,2 +1,2 @@
-# Pelin nimi 🚑 Sairaalaseikkailu tai 🏥 Viimeinen diagnoosi (mietin vielä. minkä nimen valitsen)
+# Pelin nimi 🚑 *Sairalaseiikkaailu
 # Dmitrii Stepanov

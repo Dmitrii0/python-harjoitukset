@@ -1,9 +1,14 @@
+class Pelaaja:
+    def __init__(self, nimi, taso, esineet):
+        self.nimi = nimi
+        self.taso = taso
+        self.esineet = esineet
 
-autot = [
-    {"merkki": "Toyota", "vuosi": 2018},
-    {"merkki": "Ford", "vuosi": 2020},
-    {"merkki": "VW", "vuosi": 2023}
-]
-for auto in autot:
-    if auto["vuosi"] > 2019:
-        print(auto["merkki"])
+class Esine:
+    def __init__(self, nimi, hinta):
+        self.nimi = nimi
+        self.hinta = hinta
+
+esineet = [Esine("Miekka", 123), Esine("Kilpi", 100)]
+pelaaja1 = Pelaaja("Arthur", 0, esineet)
+print(pelaaja1.esineet)
