@@ -1,0 +1,10 @@
+Potilaan tiedot: 
+ Nimi: Sasha :
+Ikä: 34 :
+Pituus: 176.0 cm :
+Paino: 78.0 kg: 
+ Tehdyt tutkimukset: Verenpaine: 145/76 :
+Tehdyt tutkimukset: Verenkokeen tulos: 7.0 :
+Tehdyt suositukset: Terveydentarkastus :
+Tehdyt diagnosoinnit: Verenpaine: 145/76 (korkea) :
+Tehdyt diagnosoinnit: Verenkokeen tulos:  7.0(liian korkea) :
