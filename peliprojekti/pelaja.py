@@ -37,8 +37,7 @@ def näytä_tutkimukset():
     for tutkimus in tutkimukset:
         print("- " + tutkimus)
 
-def tutki_sairaalaa():
-    print("Olet sairalan tutkimassa.")
+
 
 def mittaa_verenkokeeseen():
     verensokeri = float(input("Anna verensokeriarvosi: "))
@@ -197,13 +196,12 @@ while komento != "lopeta":
     print("1. Mene vastaanotolle")
     print("2. Mittaa verenpaineesi")
     print("3. Menee verenkokeeseen")
-    print("4. Tutki sairaalaa")
-    print("5. Näytä oma tiedot")
-    print("6. Näytä tehdyt tutkimukset")
-    print("7. Näytä lääkärin suositukset")
-    print("8. Näytä diagnosointi")
-    print("9. Lääkärin loppitarkastus")
-    print("10. Poista sairalasta")
+    print("4. Näytä oma tiedot")
+    print("5. Näytä tehdyt tutkimukset")
+    print("6. Näytä lääkärin suositukset")
+    print("7. Näytä diagnosointi")
+    print("8. Lääkärin loppitarkastus")
+    print("9. Poista sairalasta")
 
 
     komento = input("Anna komento: ")
@@ -220,30 +218,26 @@ while komento != "lopeta":
         mittaa_verenkokeeseen()
 
     if komento == "4":
-        print("Tutki sairaalaa")
-        tutki_sairaalaa()
-
-    if komento == "5":
         print("Näytä oma tiedot")
         vastaanotto.näytä_oma_tiedot()
 
-    if komento == "6":
+    if komento == "5":
         print("Näytä tehdyt tutkimukset")
         näytä_tutkimukset()
 
-    if komento == "7":
+    if komento == "6":
         print("Näytä lääkärin suositukset")
         näytä_suositukset()
 
-    if komento == "8":
+    if komento == "7":
         print("Näytä diagnosointi")
         näytä_diagnosointi()
 
-    if komento == "9":
+    if komento == "8":
         print("Lääkärin loppitarkastus")
         lääkärin_lopputarkastus()
         
-    if komento == "10":
+    if komento == "9":
         tallennus()
         print("Poista sairalasta")
         poista_sairaalasta()

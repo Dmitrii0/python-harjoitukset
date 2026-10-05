@@ -1,12 +1,12 @@
-PELIN OHJEET
+*****PELIN OHJEET*****
 
 Valitse toiminto kirjoittamalla valikon numero.
 
 1. Mene vastaanotolle
 2. Mittaa verenpaineesi
 3. Mene verikokeeseen
-4. Tutki sairaalaa
-5. Nayta omat tiedot
+4. Nayta omat tiedot
+5. Nayta tehdyt tutkimukset ja jne.
 
 
 Voit tarkistaa tutkimuksesi ja laakarin suositukset pelin aikana.
