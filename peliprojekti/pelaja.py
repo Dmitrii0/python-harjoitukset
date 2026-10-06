@@ -37,8 +37,6 @@ def näytä_tutkimukset():
     for tutkimus in tutkimukset:
         print("- " + tutkimus)
 
-
-
 def mittaa_verenkokeeseen():
     verensokeri = float(input("Anna verensokeriarvosi: "))
     tutkimukset.append("Verenkokeen tulos: " + str(verensokeri))
@@ -68,9 +66,9 @@ def mittaa_verenpaine():
         diagnosoinnit.append("Verenpaine: " + str(yläpaine) + "/" + str(alapaine) + " (normaali)")
 
 def mene_vastaanotolle():
-    print("Olet menossa vastaanotolle. Odota hetki...")
     print("Lääkäri " + lääkäri.nimi + " on valmis ottamaan sinut vastaan.")
-    vastaanotto.näytä_tiedot()
+    print("Moi! Olen " + potilas.nimi + "...")
+    #vastaanotto.näytä_tiedot()
     print("1. Minulla on päänsärky")
     print("2. Minulla on väsyttävä olo")
     print("3. Haluan tarkistuttaa terveydentilani")
@@ -125,7 +123,7 @@ def tallennus():
     print("Tallennetaan potilaan tiedot tiedostoon")
     tallennettavat_tiedot ={
         "nimi": potilas.nimi,
-        "ikä": potilas.ikä,
+        "ika": potilas.ikä,
         "pituus": potilas.pituus,
         "paino": potilas.paino,
         "tutkimukset": tutkimukset,
@@ -158,7 +156,7 @@ if jatka == "kyllä":
     tiedot = lataa_tiedot()
     if isinstance(tiedot, dict):
         nimi = tiedot["nimi"]
-        ikä = tiedot["ikä"]
+        ika = tiedot["ika"]
         pituus = tiedot["pituus"]
         paino = tiedot["paino"]
         tutkimukset = tiedot["tutkimukset"]
@@ -184,15 +182,12 @@ vastaanotto = Vastaanotto(potilas, lääkäri)
 if ikä < 12:
     print("Olet liian nuori pelaamaan tätä peliä")
     exit()
-else:
-    print("Tervetuloa pelaamaan peliä")
-
 
 komento = ""
 
 while komento != "lopeta":
 
-    print("SAIRAALAPELI")
+    print("*****SAIRAALAPELI*****")
     print("1. Mene vastaanotolle")
     print("2. Mittaa verenpaineesi")
     print("3. Menee verenkokeeseen")

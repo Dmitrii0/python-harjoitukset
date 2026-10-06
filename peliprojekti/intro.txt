@@ -4,5 +4,5 @@ Tassa pelissa olet potilas, joka saapuu sairalaan.
 Voit menna laakarin vastaanotolle, tehda tutkimuksia
 ja saada lakarin suosituksia.
 
-Pelin tavoitteena on selvittä terveydentilasi.
+Pelin tavoitteena on selvitta terveydentilasi.
 
