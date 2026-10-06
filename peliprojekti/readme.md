@@ -13,4 +13,4 @@ Peli alussa pelaaja kirjoittaa omat tiedot. Sen jälkeen pelaaja voi valita eri 
 
 Peli liittyy kestävän kehitykset tavoitteeseen 3: Terveyttä ja hyvinvointia, koske pelissä käsitellän terveyttä, tutkimuksia ja hyvinvointia.
 
-# 👩‍💻Dmitrii Stepanov
+## 👩‍💻Dmitrii Stepanov
