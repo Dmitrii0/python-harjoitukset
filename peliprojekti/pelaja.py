@@ -68,7 +68,6 @@ def mittaa_verenpaine():
 def mene_vastaanotolle():
     print("Lääkäri " + lääkäri.nimi + " on valmis ottamaan sinut vastaan.")
     print("Moi! Olen " + potilas.nimi + "...")
-    #vastaanotto.näytä_tiedot()
     print("1. Minulla on päänsärky")
     print("2. Minulla on väsyttävä olo")
     print("3. Haluan tarkistuttaa terveydentilani")
@@ -195,8 +194,7 @@ while komento != "lopeta":
     print("5. Näytä tehdyt tutkimukset")
     print("6. Näytä lääkärin suositukset")
     print("7. Näytä diagnosointi")
-    print("8. Lääkärin loppitarkastus")
-    print("9. Poista sairalasta")
+    print("8. Poista sairalasta")
 
 
     komento = input("Anna komento: ")
@@ -229,10 +227,6 @@ while komento != "lopeta":
         näytä_diagnosointi()
 
     if komento == "8":
-        print("Lääkärin loppitarkastus")
-        lääkärin_lopputarkastus()
-        
-    if komento == "9":
         tallennus()
         print("Poista sairalasta")
         poista_sairaalasta()

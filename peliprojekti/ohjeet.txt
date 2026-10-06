@@ -6,7 +6,7 @@ Valitse toiminto kirjoittamalla valikon numero.
 2. Mittaa verenpaineesi
 3. Mene verikokeeseen
 4. Nayta omat tiedot
-5. Nayta tehdyt tutkimukset ja jne.
+5. Nayta tehdyt tutkimukset.
 
 
 Voit tarkistaa tutkimuksesi ja laakarin suositukset pelin aikana.
