@@ -117,8 +117,6 @@ def lääkärin_lopputarkastus():
         for diagnosointi in diagnosoinnit:
             print(" - " + diagnosointi)
     
-
-
 def tallennus():
     print("Tallennetaan potilaan tiedot tiedostoon")
     tallennettavat_tiedot ={
