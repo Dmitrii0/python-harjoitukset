@@ -10,15 +10,15 @@ class Potilas(Pelaaja):  #aliluokka ja periytyminen
         self.pituus = pituus
         self.paino = paino
 
-class Lääkäri(Pelaaja):
+class Lääkäri(Pelaaja): #aliluokka ja periytyminen
     def __init__(self, nimi):
         super().__init__(nimi)
 
-class Vastaanotto:
+class Vastaanotto: #luokka, joka yhdistää potilaan ja lääkärin 
     def __init__(self, potilas, lääkäri):
         self.potilas = potilas
         self.lääkäri = lääkäri
-    def näytä_tiedot(self):
+    def näytä_tiedot(self): #funktio, joka näyttää potilaan tiedot ja lääkärin nimen
         print("Potilaan tiedot: ")
         print("Nimi: " + self.potilas.nimi)
         print("Ikä: " + str(self.potilas.ikä))
@@ -32,7 +32,7 @@ class Vastaanotto:
         print("Pituus: " + str(self.potilas.pituus) + " cm")
         print("Paino: " + str(self.potilas.paino) + " kg")
 
-def näytä_tutkimukset():
+def näytä_tutkimukset(): #funktio, joka näyttää tehdyt tutkimukset
     print("Tehdyt tutkimukset: ")
     for tutkimus in tutkimukset:
         print("- " + tutkimus)
@@ -65,28 +65,27 @@ def mittaa_verenpaine():
         print("Verenpaineesi on normaali.")
         diagnosoinnit.append("Verenpaine: " + str(yläpaine) + "/" + str(alapaine) + " (normaali)")
 
-def mene_vastaanotolle():
+def mene_vastaanotolle(): #funktio, joka simuloi potilaan menemistä vastaanotolle ja lääkärin antamia suosituksia
     print("Lääkäri " + lääkäri.nimi + " on valmis ottamaan sinut vastaan.")
     print("Moi! Olen " + potilas.nimi + "...")
     print("1. Minulla on päänsärky")
     print("2. Minulla on väsyttävä olo")
     print("3. Haluan tarkistuttaa terveydentilani")
-
     valinta = input("Valitse oireesi (1-3): ")
     if valinta == "1":
-        print("Lääkäri suosittelee sinulle verenpaineen mittamista ja lepoa.")
-        suositukset.append("Verenpaineen mittaus")
+            print("Lääkäri suosittelee sinulle verenpaineen mittamista ja lepoa.")
+            suositukset.append("Verenpaineen mittaus")
     elif valinta == "2":
-        print("Lääkäri suosittelee sinulle verenkokeen tekemistä.")
-        suositukset.append("Verenkokeen tekeminen")
+            print("Lääkäri suosittelee sinulle verenkokeen tekemistä.")
+            suositukset.append("Verenkokeen tekeminen")
     elif valinta == "3":
-        print("Lääkäri suosittelee sinulle terveydentarkastusta.")
-        suositukset.append("Terveydentarkastus")
+            print("Lääkäri suosittelee sinulle terveydentarkastusta.")
+            suositukset.append("Terveydentarkastus")
 
 def poista_sairaalasta():
     print("Peli lopetetaan.")
 
-def näytä_suositukset():
+def näytä_suositukset(): 
     print("Lääkärin suositukset: ")
     for suositus in suositukset:
         print(" - " + suositus)    
@@ -117,6 +116,8 @@ def lääkärin_lopputarkastus():
     else:
         for diagnosointi in diagnosoinnit:
             print(" - " + diagnosointi)
+    
+
 
 def tallennus():
     print("Tallennetaan potilaan tiedot tiedostoon")
@@ -130,12 +131,12 @@ def tallennus():
         "diagnosoinnit": diagnosoinnit
     }
     with open("potilaan_tiedot.json", "w") as tiedosto:
-        json.dump(tallennettavat_tiedot, tiedosto)
+        json.dump(tallennettavat_tiedot, tiedosto) #json.dump() funktio tallentaa tiedot JSON-muodossa tiedostoon
 
 def lataa_tiedot():
     try:
         with open("potilaan_tiedot.json", "r") as tiedosto:
-            tallennetut_tiedot = json.load(tiedosto)
+            tallennetut_tiedot = json.load(tiedosto) #json.load() funktio lataa tiedot JSON_muodossa tiedostosta
         return tallennetut_tiedot
     except FileNotFoundError:
         return "Potilaan tiedosto ei löytynyt."
@@ -153,7 +154,7 @@ jatka = input("Halutaanko jatkaa edellisestä tallennuksesta? (kyllä/ei): ")
 
 if jatka == "kyllä":
     tiedot = lataa_tiedot()
-    if isinstance(tiedot, dict):
+    if isinstance(tiedot, dict): #isinstanse() funktio tarkistaa, onko tiedot sanakirja (dict) vai ei
         nimi = tiedot["nimi"]
         ika = tiedot["ika"]
         pituus = tiedot["pituus"]
@@ -164,7 +165,7 @@ if jatka == "kyllä":
     else:
         print(tiedot)
         exit()
-else:
+else: #tallennusta JSON-muodossa ei ole, joten kysytään pelaajan tiedot
     nimi = str(input("Anna nimesi: "))
     ikä = int(input("Anna ikasi: "))
     pituus = float(input("Anna pituutesi (cm): "))
@@ -172,7 +173,6 @@ else:
     tutkimukset = []
     suositukset = []
     diagnosoinnit = []
-
 
 potilas = Potilas(nimi, ikä, pituus, paino)
 lääkäri = Lääkäri("Jussi")
@@ -190,10 +190,10 @@ while komento != "lopeta":
     print("1. Mene vastaanotolle")
     print("2. Mittaa verenpaineesi")
     print("3. Menee verenkokeeseen")
-    print("4. Näytä oma tiedot")
+    print("4. Näytä lääkärin suositukset")
     print("5. Näytä tehdyt tutkimukset")
-    print("6. Näytä lääkärin suositukset")
-    print("7. Näytä diagnosointi")
+    print("6. Näytä diagnosointi")
+    print("7. Lääkärin lopputarkastus")
     print("8. Poista sairalasta")
 
 
@@ -211,22 +211,30 @@ while komento != "lopeta":
         mittaa_verenkokeeseen()
 
     if komento == "4":
-        print("Näytä oma tiedot")
-        vastaanotto.näytä_oma_tiedot()
+        print("Näytä lääkärin suositukset")
+        näytä_suositukset()
 
     if komento == "5":
         print("Näytä tehdyt tutkimukset")
         näytä_tutkimukset()
 
     if komento == "6":
-        print("Näytä lääkärin suositukset")
-        näytä_suositukset()
-
-    if komento == "7":
         print("Näytä diagnosointi")
         näytä_diagnosointi()
 
+    if komento == "7":
+        print("Näytä lääkärin lopputarkastus")
+        lääkärin_lopputarkastus()
+
     if komento == "8":
+        print("Näytä lääkärin suositukset")
+        näytä_suositukset()
+
+    if komento == "9":
+        print("Näytä diagnosointi")
+        lääkärin_lopputarkastus()
+
+    if komento == "10":
         tallennus()
         print("Poista sairalasta")
         poista_sairaalasta()
