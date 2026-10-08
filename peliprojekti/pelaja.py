@@ -99,23 +99,37 @@ def näytä_diagnosointi():
             print(" - " + diagnosointi)
 
 def lääkärin_lopputarkastus():
-    print("Lääkäri " + lääkäri.nimi + " on tarkastanut potilaan tiedot.")
-    print("Potilaan tiedot: ")
-    print(" - Nimi: " + potilas.nimi)
-    print(" - Ikä: " + str(potilas.ikä))
-    print(" - Pituus: " + str(potilas.pituus) + " cm")
-    print(" - Paino: " + str(potilas.paino) + " kg")
-    print("Tehdyt tutkimukset: ")
-    if len(tutkimukset) == 0:
-        print("Ei tutkimuksia saatavilla.")
-    else:
-        for tutkimus in tutkimukset:
-            print(" - " + tutkimus)
+    sokeri_tehty = False
+    verenpaine_tehdy = False
+    sokeri_huono = False
+    verenpaine_huono = False
+    for diagnosointi in diagnosoinnit:
+        if "Verenkokeen tulos" in diagnosointi and ("liian alhainen" in diagnosointi or "liian korkea" in diagnosointi):
+            sokeri_huono = True
+        if "Verenpaine" in diagnosointi and ("korkea" in diagnosointi or "matala" in diagnosointi):
+            verenpaine_huono = True
+        if "Verenkokeen tulos" in diagnosointi:
+            sokeri_tehdy = True
+        if "Verenpaine" in diagnosointi:
+            verenpaine_tehdy = True
     if len(diagnosoinnit) == 0:
         print("Ei diagnosointia saatavilla.")
     else:
         for diagnosointi in diagnosoinnit:
-            print(" - " + diagnosointi)
+            print(" - " + diagnosointi)        
+    if not sokeri_tehdy or not verenpaine_tehdy:
+        print("Lääkärin lopputarkastus: Potilas ei ole tehnyt kaikkia tarvittavia tutkimuksia. Suositellaan lisätutkimuksia.")
+    elif sokeri_huono and verenpaine_huono:
+        print("Lääkärin lopputarkastus: Potilaan verensokeri ja verenpaine ovat huonossa kunnossa. Suositellaan lisätutkimuksia ja hoitoa.")
+
+    elif sokeri_huono and not verenpaine_huono:
+        print("Lääkärin lopputarkastus: Potilaan verensokeri on huonossa kunnossa. Suositellaan lisätutkimuksia ja hoitoa.")
+    elif not sokeri_huono and verenpaine_huono:
+        print("Lääkärin lopputarkastus: Potilaan verenpaine on huonossa kunnossa. Suositellaan lisätutkimuksia ja hoitoa.")
+    elif not sokeri_huono and not verenpaine_huono:
+        print("Lääkärin lopputarkastus: Potilaan verensokeri ja verenpaine ovat normaalissa kunnossa.")
+
+   
     
 def tallennus():
     print("Tallennetaan potilaan tiedot tiedostoon")
@@ -225,14 +239,6 @@ while komento != "lopeta":
         lääkärin_lopputarkastus()
 
     if komento == "8":
-        print("Näytä lääkärin suositukset")
-        näytä_suositukset()
-
-    if komento == "9":
-        print("Näytä diagnosointi")
-        lääkärin_lopputarkastus()
-
-    if komento == "10":
         tallennus()
         print("Poista sairalasta")
         poista_sairaalasta()
