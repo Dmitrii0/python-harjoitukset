@@ -3,22 +3,23 @@ import json
 class Pelaaja:          #yläluokka
     def __init__(self, nimi):
         self.nimi = nimi
-class Potilas(Pelaaja):  #aliluokka ja periytyminen
+
+class Potilas(Pelaaja):  #aliluokka 
     def __init__(self, nimi, ikä, pituus, paino):
         super().__init__(nimi)
         self.ikä = ikä
         self.pituus = pituus
         self.paino = paino
 
-class Lääkäri(Pelaaja): #aliluokka ja periytyminen
+class Lääkäri(Pelaaja): 
     def __init__(self, nimi):
         super().__init__(nimi)
 
-class Vastaanotto: #luokka, joka yhdistää potilaan ja lääkärin 
+class Vastaanotto:
     def __init__(self, potilas, lääkäri):
         self.potilas = potilas
         self.lääkäri = lääkäri
-    def näytä_tiedot(self): #funktio, joka näyttää potilaan tiedot ja lääkärin nimen
+    def näytä_tiedot(self):
         print("Potilaan tiedot: ")
         print("Nimi: " + self.potilas.nimi)
         print("Ikä: " + str(self.potilas.ikä))
@@ -99,7 +100,7 @@ def näytä_diagnosointi():
             print(" - " + diagnosointi)
 
 def lääkärin_lopputarkastus():
-    sokeri_tehty = False
+    sokeri_tehdy = False
     verenpaine_tehdy = False
     sokeri_huono = False
     verenpaine_huono = False
@@ -168,7 +169,7 @@ if jatka == "kyllä":
     tiedot = lataa_tiedot()
     if isinstance(tiedot, dict): #isinstanse() funktio tarkistaa, onko tiedot sanakirja (dict) vai ei
         nimi = tiedot["nimi"]
-        ika = tiedot["ika"]
+        ikä = tiedot["ika"]
         pituus = tiedot["pituus"]
         paino = tiedot["paino"]
         tutkimukset = tiedot["tutkimukset"]
